@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificar dia</title>
+  </head>
+  <body>
+    <h2>Qual é o dia da semana?</h2>
+    <input type="text" id="diaSemana" placeholder="Digite o dia da semana" />
+    <button onclick="verificarDia()">Verificar</button><br />
+    <div id="mensagem"></div>
+  </body>
+</html>
+
+<script>
+  function verificarDia() {
+    const entrada = document
+      .getElementById("diaSemana")
+      .value.trim()
+      .toLowerCase();
+    console.log(`${entrada}`);
+
+    const finalDeSemana = ["sábado", "sabado", "domingo"];
+    const diaSemana = ["segunda", "terça", "quarta", "quinta", "sexta"];
+
+    if (finalDeSemana.includes(entrada)) {
+      mensagem.innerHTML = "Bom final de semana!";
+    } else if (diaSemana.includes(entrada)) {
+      mensagem.innerHTML = "Boa semana";
+    } else{
+        mensagem.innerHTML = `<span style = "color: red;"> Insira uma valor válido! </span>`
+    }
+  }
+</script>
